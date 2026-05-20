@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Evolution Roadmap Dashboard (L1 - L5)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&family=Urbanist:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Pretendard', 'Urbanist', sans-serif;
+            background-color: #0d0f12;
+            color: #f3f4f6;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0d0f12;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1f2937;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #374151;
+        }
+        @keyframes custom-pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.15); opacity: 0.8; }
+        }
+        .active-pulse {
+            animation: custom-pulse 2s infinite ease-in-out;
+        }
+        .glow-cyan { box-shadow: 0 0 15px rgba(6, 182, 212, 0.4); }
+    </style>
+</head>
+<body class="p-4 md:p-6 min-h-screen flex items-center justify-center">
+
+    <div class="w-full max-w-[1450px] bg-[#111622] rounded-xl border border-slate-800 shadow-2xl p-6 relative overflow-hidden flex flex-col justify-between" style="min-height: 850px;">
+        
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b12_1px,transparent_1px),linear-gradient(to_bottom,#1e293b12_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
+
+        <!-- 1. HEADER SECTION -->
+        <div class="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center border-b border-slate-800 pb-4 mb-4 gap-4">
+            <div>
+                <div class="flex items-center gap-3">
+                    <span class="bg-cyan-500/10 text-cyan-400 text-xs font-bold px-2.5 py-1 rounded-full border border-cyan-500/20 uppercase tracking-widest">Enterprise Tech Roadmap</span>
+                </div>
+                <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight mt-1 text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400">
+                    AI EVOLUTION <span class="text-cyan-400 font-medium">ROADMAP</span>
+                </h1>
+            </div>
+            
+            <div class="flex flex-wrap items-center gap-4 bg-slate-900/60 p-3 rounded-lg border border-slate-800/80 text-xs font-semibold">
+                <div class="flex items-center gap-1.5">
+                    <span class="text-slate-400 mr-1">STATUS LEGEND:</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                    <span class="w-3.5 h-3.5 rounded-full border-2 border-dashed border-sky-400 flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span></span>
+                    <span class="text-slate-300">TBC</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                    <span class="w-3.5 h-3.5 rounded-full bg-emerald-500"></span>
+                    <span class="text-slate-300">LOW RISK</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                    <span class="w-3.5 h-3.5 rounded-full bg-amber-500"></span>
+                    <span class="text-slate-300">HIGH RISK</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                    <span class="w-3.5 h-3.5 rounded-full bg-indigo-500"></span>
+                    <span class="text-slate-300">BAU</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. TIME HEADER BLOCK -->
+        <div class="relative z-10 grid grid-cols-12 gap-0.5 bg-slate-950/80 rounded-t-lg border border-b-0 border-slate-800 overflow-hidden text-center text-[11px] font-bold tracking-widest text-slate-400">
+            <div class="col-span-2 bg-slate-900 flex items-center justify-center p-3 border-r border-slate-800 text-slate-300">
+                TIMELINE STAGES
+            </div>
+            <div class="col-span-2 bg-slate-950 p-3 flex flex-col justify-center">
+                <span class="text-xs text-emerald-400">2022</span>
+                <span class="text-[9px] text-slate-500">L1. CHATBOTS</span>
+            </div>
+            <div class="col-span-2 bg-slate-900/50 p-3 flex flex-col justify-center border-l border-slate-800/40">
+                <span class="text-xs text-teal-400">2023</span>
+                <span class="text-[9px] text-slate-500">L2. REASONERS</span>
+            </div>
+            <div class="col-span-2 bg-slate-950 p-3 flex flex-col justify-center border-l border-slate-800/40">
+                <span class="text-xs text-amber-400">2024~2025</span>
+                <span class="text-[9px] text-slate-400 font-extrabold">L3. AGENTS</span>
+            </div>
+            <div class="col-span-2 bg-slate-900/50 p-3 flex flex-col justify-center border-l border-slate-800/40">
+                <span class="text-xs text-indigo-400">2026 (NOW)</span>
+                <span class="text-[9px] text-indigo-300">L4. INNOVATORS</span>
+            </div>
+            <div class="col-span-2 bg-slate-950 p-3 flex flex-col justify-center border-l border-slate-800/40">
+                <span class="text-xs text-purple-400">2027+ BEYOND</span>
+                <span class="text-[9px] text-slate-500">L5. ORGANIZATIONS</span>
+            </div>
+        </div>
+
+        <!-- 3. MAIN ROADMAP GRID -->
+        <div class="relative z-10 flex flex-col border border-slate-800 bg-slate-950/30 rounded-b-lg mb-6 overflow-hidden">
+            
+            <!-- LANE 1: MARKETING & TRENDS -->
+            <div class="grid grid-cols-12 border-b border-slate-800/80 min-h-[90px] items-stretch">
+                <div class="col-span-2 bg-slate-900/80 p-3 flex flex-col justify-center items-center border-r border-slate-800 text-center">
+                    <span class="text-xs font-bold text-sky-400 tracking-wider">MARKETING &amp; TRENDS</span>
+                    <span class="text-[8px] text-slate-500 mt-1 uppercase">Hype &amp; Adoption Cycle</span>
+                </div>
+                <div class="col-span-10 relative flex items-center px-4 py-2">
+                    <div class="absolute left-8 right-8 h-1 bg-gradient-to-r from-amber-500 via-sky-400 to-indigo-500 rounded"></div>
+                    
+                    <div class="w-full grid grid-cols-5 relative z-10 gap-2">
+                        <div class="flex flex-col items-start pl-4">
+                            <span class="bg-amber-500 text-slate-950 text-[9px] font-black px-1.5 py-0.5 rounded-md mb-1">HIGH HYPE</span>
+                            <div class="flex items-center gap-1">
+                                <span class="w-4 h-4 rounded-full bg-amber-500 flex items-center justify-center text-[8px] text-black font-extrabold"><i class="fa-solid fa-check"></i></span>
+                                <span class="text-xs font-bold text-slate-200">생성형 대중화</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-start pl-2">
+                            <span class="bg-indigo-500 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-md mb-1">BAU ADOPT</span>
+                            <div class="flex items-center gap-1">
+                                <span class="w-4 h-4 rounded-full bg-indigo-500 flex items-center justify-center text-[8px] text-white font-extrabold"><i class="fa-solid fa-check"></i></span>
+                                <span class="text-xs font-bold text-slate-200">추론 경쟁 본격화</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-start pl-2">
+                            <span class="bg-sky-400 text-black text-[9px] font-black px-1.5 py-0.5 rounded-md mb-1 active-pulse">CURRENT BOOM</span>
+                            <div class="flex items-center gap-1">
+                                <span class="w-4 h-4 rounded-full bg-sky-400 flex items-center justify-center text-[8px] text-black font-extrabold active-pulse"><i class="fa-solid fa-spinner"></i></span>
+                                <span class="text-xs font-bold text-sky-300">자율 에이전트 폭발</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-start pl-2">
+                            <span class="bg-emerald-500 text-slate-950 text-[9px] font-bold px-1.5 py-0.5 rounded-md mb-1">LOW RISK ONSET</span>
+                            <div class="flex items-center gap-1">
+                                <span class="w-4 h-4 rounded-full bg-emerald-500 flex items-center justify-center text-[8px] text-black font-extrabold"><i class="fa-solid fa-arrow-trend-up"></i></span>
+                                <span class="text-xs font-bold text-slate-200">과학적 가설 수립</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-start pl-2">
+                            <span class="bg-slate-700 text-slate-400 text-[9px] font-bold px-1.5 py-0.5 rounded-md mb-1">FUTURE VISION</span>
+                            <div class="flex items-center gap-1">
+                                <span class="w-4 h-4 rounded-full border border-slate-600 flex items-center justify-center text-[8px] text-slate-400 font-extrabold"><i class="fa-solid fa-hourglass-start"></i></span>
+                                <span class="text-xs font-bold text-slate-400">자율 협업 조직</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LANE 2: DEVELOPMENT & TOOL STACK -->
+            <div class="grid grid-cols-12 border-b border-slate-800/80 min-h-[340px] items-stretch">
+                <div class="col-span-2 bg-slate-900/80 p-3 flex flex-col justify-center items-center border-r border-slate-800 text-center">
+                    <span class="text-xs font-bold text-emerald-400 tracking-wider">DEVELOPMENT &amp; TOOLS</span>
+                    <span class="text-[8px] text-slate-500 mt-1 uppercase">Core Architecture &amp; Engines</span>
+                </div>
+                <div class="col-span-10 relative grid grid-cols-5 divide-x divide-slate-800/40 p-4">
+                    
+                    <!-- LEVEL 1: CHATBOTS -->
+                    <div class="flex flex-col gap-3 pr-2">
+                        <div class="bg-slate-900/90 rounded-lg p-2.5 border border-slate-800 hover:border-emerald-500 transition-all duration-300 h-full flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-[10px] font-black text-emerald-400">LEVEL 1</span>
+                                    <i class="fa-solid fa-comment text-slate-500 text-[10px]"></i>
+                                </div>
+                                <h4 class="text-xs font-bold text-slate-100">Chatbots &amp; LLMs</h4>
+                                <p class="text-[9px] text-slate-400 mt-1 leading-relaxed">단일 대화 인터페이스 기반의 텍스트/이미지 대량 생성 기술.</p>
+                                <!-- Clickable Tool Tags -->
+                                <div class="flex flex-wrap gap-1 mt-2">
+                                    <a href="https://chatgpt.com" target="_blank" class="bg-slate-800 text-slate-300 hover:text-emerald-400 hover:bg-slate-750 text-[9px] font-bold px-1.5 py-0.5 rounded border border-slate-700/60 transition-all duration-150">
+                                        ChatGPT <i class="fa-solid fa-arrow-up-right-from-square text-[7px] ml-0.5 opacity-60"></i>
+                                    </a>
+                                    <a href="https://claude.ai" target="_blank" class="bg-slate-800 text-slate-300 hover:text-emerald-400 hover:bg-slate-750 text-[9px] font-bold px-1.5 py-0.5 rounded border border-slate-700/60 transition-all duration-150">
+                                        Claude <i class="fa-solid fa-arrow-up-right-from-square text-[7px] ml-0.5 opacity-60"></i>
+                                    </a>
+                                    <a href="https://gemini.google.com" target="_blank" class="bg-slate-800 text-slate-300 hover:text-emerald-400 hover:bg-slate-750 text-[9px] font-bold px-1.5 py-0.5 rounded border border-slate-700/60 transition-all duration-150">
+                                        Gemini <i class="fa-solid fa-arrow-up-right-from-square text-[7px] ml-0.5 opacity-60"></i>
+                                    </a>
+                                    <a href="https://copilot.microsoft.com" target="_blank" class="bg-slate-800 text-slate-300 hover:text-emerald-400 hover:bg-slate-750 text-[9px] font-bold px-1.5 py-0.5 rounded border border-slate-700/60 transition-all duration-150">
+                                        Copilot <i class="fa-solid fa-arrow-up-right-from-square text-[7px] ml-0.5 opacity-60"></i>
+                                    </a>
+                                    <a href="https://poe.com" target="_blank" class="bg-slate-800 text-slate-300 hover:text-emerald-400 hover:bg-slate-750 text-[9px] font-bold px-1.5 py-0.5 rounded border border-slate-700/60 transition-all duration-150">
+                                        Poe <i class="fa-solid fa-arrow-up-right-from-square text-[7px] ml-0.5 opacity-60"></i>
+                                    </a>
+                                    <a href="https://www.midjourney.com" target="_blank" class="bg-slate-800 text-slate-300 hover:text-emerald-400 hover:bg-slate-750 text-[9px] font-bold px-1.5 py-0.5 rounded border border-slate-700/60 transition-all duration-150">
+                                        Midjourney <i class="fa-solid fa-arrow-up-right-from-square text-[7px] ml-0.5 opacity-60"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Study 목적 & 예상 결과 -->
+                            <div class="mt-3 pt-2.5 border-t border-slate-800/80 text-[9px] space-y-1.5">
+                                <div><span class="text-emerald-400 font-extrabold block">🔍 Study 목적</span>프롬프트 엔지니어링 기반 사무 자동화 가설 검증 및 정보 탐색 시간 최소화.</div>
+                                <div><span class="text-emerald-400 font-extrabold block">🎯 예상 결과</span>업무 문서 요약 및 메일링 생산성 40% 향상, 단순 지식 검색 리소스 대폭 절감.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LEVEL 2: REASONERS -->
+                    <div class="flex flex-col gap-3 px-2">
+                        <div class="bg-slate-900/90 rounded-lg p-2.5 border border-slate-800 hover:border-indigo-500 transition-all duration-300 h-full flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-[10px] font-black text-indigo-400">LEVEL 2</span>
+                                    <i class="fa-solid fa-brain text-slate-500 text-[10px]"></i>
+                                </div>
+                                <h4 class="text-xs font-bold text-slate-100">Logical Reasoners</h4>
+                                <p class="text-[9px] text-slate-400 mt-1 leading-relaxed">스스로 사유의 흐름(CoT)을 거쳐 다단계 복합 문제 해결.</p>
+                                <!-- Clickable Tool Tags -->
+                                <div class="flex flex-wrap gap-1 mt-2">
+                                    <a href="https://openai.com/news/openai-o1-preview" target="_blank" class="bg-slate-800 text-slate-300 hover:text-indigo-400 hover:bg-slate-750 text-[9px] font-bold px-1.5 py-0.5 rounded border border-slate-700/60 transition-all duration-150">
+                                        OpenAI o1/o3 <i class="fa-solid fa-arrow-up-right-from-square text-[7px] ml-0.5 opacity-60"></i>
+                                    </a>
+                                    <a href="https://github.com/deepseek-ai/DeepSeek-R1" target="_blank" class="bg-slate-800 text-indigo-300 hover:text-indigo-400 hover:bg-slate-750 text-[9px] font-bold px-1.5 py-0.5 rounded border border-indigo-500/30 transition-all duration-150">
+                                        DeepSeek-R1 <i class="fa-solid fa-arrow-up-right-from-square text-[7px] ml-0.5 opacity-60"></i>
+                                    </a>
+                                    <a href="https://www.perplexity.ai" target="_blank" class="bg-slate-800 text-slate-300 hover:text-indigo-400 hover:bg-slate-750 text-[9px] font-bold px-1.5 py-0.5 rounded border border-slate-700/60 transition-all duration-150">
+                                        Perplexity <i class="fa-solid fa-arrow-up-right-from-square text-[7px] ml-0.5 opacity-60"></i>
+                                    </a>
+                                    <a href="https://www.anthropic.com/news/claude-3-5-sonnet" target="_blank" class="bg-slate-800 text-slate-300 hover:text-indigo-400 hover:bg-slate-750 text-[9px] font-bold px-1.5 py-0.5 rounded border border-slate-700/60 transition-all duration-150">
+                                        Claude 3.5 <i class="fa-solid fa-arrow-up-right-from-square text-[7px] ml-0.5 opacity-60"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Study 목적 & 예상 결과 -->
+                            <div class="mt-3 pt-2.5 border-t border-slate-800/80 text-[9px] space-y-1.5">
+                                <div><span class="text-indigo-400 font-extrabold block">🔍 Study 목적</span>코딩 에러 자동 수정, 정밀 데이터 연산 및 논리 체계적 문제 자율 분석.</div>
+                                <div><span class="text-indigo-400 font-extrabold block">🎯 예상 결과</span>개발 디버깅 시간 60% 단축, 고난도 시뮬레이션 알고리즘 설계 무오류성 입증.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LEVEL 3: AGENTS (Active Stage) -->
+                    <div class="flex flex-col gap-3 px-2">
+                        <div class="bg-cyan-950/40 rounded-lg p-2.5 border border-cyan-500/30 hover:border-cyan-400 transition-all duration-300 shadow-lg glow-cyan h-full flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-[10px] font-black text-cyan-400">LEVEL 3 [ACTIVE]</span>
+                                    <i class="fa-solid fa-robot text-cyan-400 text-[10px]"></i>
+                                </div>
+                                <h4 class="text-xs font-bold text-cyan-100">Autonomous Agents</h4>
+                                <p class="text-[9px] text-cyan-200 mt-1 leading-relaxed">자율적 목표 수립 및 기기 제어를 동반한 복합 실무 전담 수행.</p>
+                                <!-- Clickable Tool Tags -->
+                                <div class="flex flex-wrap gap-1 mt-2">
+                                    <a href="https://manus.im" target="_blank" class="bg-cyan-500 text-slate-950 hover:bg-cyan-400 text-[9px] font-black px-1.5 py-0.5 rounded border border-cyan-400/30 transition-all duration-150">
+                                        Manus AI <i class="fa-solid fa-arrow-up-right-from-square text-[7px] ml-0.5 opacity-80"></i>
+                                    </a>
+                                    <a href="https://github.com/features/copilot" target="_blank" class="bg-cyan-500 text-slate-950 hover:bg-cyan-400 text-[9px] font-black px-1.5 py-0.5 rounded border border-cyan-400/30 transition-all duration-150">
+                                        Codex/Copilot <i class="fa-solid fa-arrow-up-right-from-square text-[7px] ml-0.5 opacity-80"></i>
+                                    </a>
+                                    <a href="https://www.cognition.ai" target="_blank" class="bg-slate-800 text-slate-200 hover:text-cyan-400 hover:bg-slate-750 text-[9px] font-bold px-1.5 py-0.5 rounded border border-slate-700/60 transition-all duration-150">
+                                        Devin <i class="fa-solid fa-arrow-up-right-from-square text-[7px] ml-0.5 opacity-60"></i>
+                                    </a>
+                                    <a href="https://replit.com/ai" target="_blank" class="bg-slate-800 text-slate-200 hover:text-cyan-400 hover:bg-slate-750 text-[9px] font-bold px-1.5 py-0.5 rounded border border-slate-700/60 transition-all duration-150">
+                                        Replit Agent <i class="fa-solid fa-arrow-up-right-from-square text-[7px] ml-0.5 opacity-60"></i>
+                                    </a>
+                                    <a href="https://www.microsoft.com/ko-kr/microsoft-copilot/microsoft-copilot-studio" target="_blank" class="bg-slate-800 text-slate-200 hover:text-cyan-400 hover:bg-slate-750 text-[9px] font-bold px-1.5 py-0.5 rounded border border-slate-700/60 transition-all duration-150">
+                                        Copilot Studio <i class="fa-solid fa-arrow-up-right-from-square text-[7px] ml-0.5 opacity-60"></i>
+                                    </a>
+                                    <a href="https://www.anthropic.com/news/3-5-models-and-computer-use-api" target="_blank" class="bg-slate-800 text-slate-200 hover:text-cyan-400 hover:bg-slate-750 text-[9px] font-bold px-1.5 py-0.5 rounded border border-slate-700/60 transition-all duration-150">
+                                        Claude OS Use <i class="fa-solid fa-arrow-up-right-from-square text-[7px] ml-0.5 opacity-60"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Study 목적 & 예상 결과 -->
+                            <div class="mt-3 pt-2.5 border-t border-cyan-800/80 text-[9px] space-y-1.5">
+                                <div><span class="text-cyan-400 font-extrabold block">🔍 Study 목적</span>OS 및 사내 DB 직접 접근, 웹 브라우징 자율 오퍼레이팅 기술 표준 보안 체계 확보.</div>
+                                <div><span class="text-cyan-300 font-extrabold block">🎯 예상 결과</span>경쟁사 특허 모니터링, 데이터 파이프라인 정형화 업무 24/7 무인 자동 가동.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LEVEL 4: SCIENTIFIC INNOVATORS -->
+                    <div class="flex flex-col gap-3 px-2">
+                        <div class="bg-slate-900/90 rounded-lg p-2.5 border border-slate-800 hover:border-teal-500 transition-all duration-300 h-full flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-[10px] font-black text-teal-400">LEVEL 4 [EMERGING]</span>
+                                    <i class="fa-solid fa-vial-virus text-slate-500 text-[10px]"></i>
+                                </div>
+                                <h4 class="text-xs font-bold text-slate-100">Scientific Innovators</h4>
+                                <p class="text-[9px] text-slate-400 mt-1 leading-relaxed">시뮬레이션을 통한 가설 자율 검증 및 단백질/신소재 발견.</p>
+                                <!-- Clickable Tool Tags -->
+                                <div class="flex flex-wrap gap-1 mt-2">
+                                    <a href="https://www.deepmind.com/open-source/alphafold-3" target="_blank" class="bg-slate-800 text-slate-300 hover:text-teal-400 hover:bg-slate-750 text-[9px] font-bold px-1.5 py-0.5 rounded border border-slate-700/60 transition-all duration-150">
+                                        AlphaFold 3 <i class="fa-solid fa-arrow-up-right-from-square text-[7px] ml-0.5 opacity-60"></i>
+                                    </a>
+                                    <a href="https://www.deepmind.com/publications/materials-exploration-with-crystals-gnome" target="_blank" class="bg-slate-800 text-teal-400 hover:text-teal-300 hover:bg-slate-750 text-[9px] font-bold px-1.5 py-0.5 rounded border border-teal-500/20 transition-all duration-150">
+                                        Google GNoME <i class="fa-solid fa-arrow-up-right-from-square text-[7px] ml-0.5 opacity-60"></i>
+                                    </a>
+                                    <a href="https://rxn.res.ibm.com" target="_blank" class="bg-slate-800 text-slate-300 hover:text-teal-400 hover:bg-slate-750 text-[9px] font-bold px-1.5 py-0.5 rounded border border-slate-700/60 transition-all duration-150">
+                                        IBM RXN <i class="fa-solid fa-arrow-up-right-from-square text-[7px] ml-0.5 opacity-60"></i>
+                                    </a>
+                                    <a href="https://www.phind.com" target="_blank" class="bg-slate-800 text-slate-300 hover:text-teal-400 hover:bg-slate-750 text-[9px] font-bold px-1.5 py-0.5 rounded border border-slate-700/60 transition-all duration-150">
+                                        Phind R&amp;D <i class="fa-solid fa-arrow-up-right-from-square text-[7px] ml-0.5 opacity-60"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Study 목적 & 예상 결과 -->
+                            <div class="mt-3 pt-2.5 border-t border-slate-800/80 text-[9px] space-y-1.5">
+                                <div><span class="text-teal-400 font-extrabold block">🔍 Study 목적</span>R&D 실험 설계, 특허 가설 발견 및 차세대 반도체 신소재/소자 시뮬레이션 자동화.</div>
+                                <div><span class="text-teal-400 font-extrabold block">🎯 예상 결과</span>신기술 프로토타이핑 가설 도출 속도 80% 가속화, 물리적 한계점 사전 검출.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LEVEL 5: AUTONOMOUS ORGANIZATIONS -->
+                    <div class="flex flex-col gap-3 pl-2">
+                        <div class="bg-slate-900/90 rounded-lg p-2.5 border border-slate-850 hover:border-purple-500 transition-all duration-300 h-full flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-[10px] font-black text-purple-400">LEVEL 5</span>
+                                    <i class="fa-solid fa-sitemap text-slate-500 text-[10px]"></i>
+                                </div>
+                                <h4 class="text-xs font-bold text-slate-100">Autonomous Orgs</h4>
+                                <p class="text-[9px] text-slate-500 mt-1 leading-relaxed">다중 에이전트 간 고도의 분업 및 연계를 통한 전사 경영 프로세스 자율화.</p>
+                                <!-- Clickable Tool Tags -->
+                                <div class="flex flex-wrap gap-1 mt-2">
+                                    <a href="https://www.crewai.com" target="_blank" class="bg-slate-800 text-slate-400 hover:text-purple-400 hover:bg-slate-750 text-[9px] font-bold px-1.5 py-0.5 rounded border border-slate-700/60 transition-all duration-150">
+                                        CrewAI <i class="fa-solid fa-arrow-up-right-from-square text-[7px] ml-0.5 opacity-60"></i>
+                                    </a>
+                                    <a href="https://microsoft.github.io/autogen" target="_blank" class="bg-slate-800 text-slate-400 hover:text-purple-400 hover:bg-slate-750 text-[9px] font-bold px-1.5 py-0.5 rounded border border-slate-700/60 transition-all duration-150">
+                                        AutoGen <i class="fa-solid fa-arrow-up-right-from-square text-[7px] ml-0.5 opacity-60"></i>
+                                    </a>
+                                    <a href="https://www.langchain.com/langgraph" target="_blank" class="bg-slate-800 text-slate-400 hover:text-purple-400 hover:bg-slate-750 text-[9px] font-bold px-1.5 py-0.5 rounded border border-slate-700/60 transition-all duration-150">
+                                        LangGraph <i class="fa-solid fa-arrow-up-right-from-square text-[7px] ml-0.5 opacity-60"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Study 목적 & 예상 결과 -->
+                            <div class="mt-3 pt-2.5 border-t border-slate-800/80 text-[9px] space-y-1.5">
+                                <div><span class="text-purple-400 font-extrabold block">🔍 Study 목적</span>부서별 특화 에이전트 연합(MAS) 오케스트레이션 및 휴먼 개입 최소화 자동 의사결정.</div>
+                                <div><span class="text-purple-400 font-extrabold block">🎯 예상 결과</span>엔드투엔드 공급망 체인 및 비즈니스 분석 전체 프로세스 초간결/자율화 실현.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- LANE 3: KPI & PENETRATION RATE -->
+            <div class="grid grid-cols-12 min-h-[90px] items-stretch">
+                <div class="col-span-2 bg-slate-900/80 p-3 flex flex-col justify-center items-center border-r border-slate-800 text-center">
+                    <span class="text-xs font-bold text-amber-500 tracking-wider">MARKET PENETRATION</span>
+                    <span class="text-[8px] text-slate-500 mt-1 uppercase">Enterprise Adoption KPIs</span>
+                </div>
+                <div class="col-span-10 relative flex items-center px-4 py-2">
+                    <div class="absolute left-10 right-10 h-1 bg-gradient-to-r from-emerald-500 via-amber-400 to-slate-700 rounded"></div>
+                    
+                    <div class="w-full grid grid-cols-5 relative z-10 gap-2">
+                        <div class="flex flex-col items-center">
+                            <span class="text-xs font-extrabold text-emerald-400">95% ADOPTION</span>
+                            <div class="w-24 bg-slate-800 h-2 rounded-full overflow-hidden mt-1.5">
+                                <div class="bg-emerald-500 h-full" style="width: 95%;"></div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <span class="text-xs font-extrabold text-indigo-400">85% ADOPTION</span>
+                            <div class="w-24 bg-slate-800 h-2 rounded-full overflow-hidden mt-1.5">
+                                <div class="bg-indigo-500 h-full" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <span class="text-xs font-extrabold text-cyan-400">65% ACTIVE IN-USE</span>
+                            <div class="w-24 bg-slate-800 h-2 rounded-full overflow-hidden mt-1.5">
+                                <div class="bg-cyan-400 h-full active-pulse" style="width: 65%;"></div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <span class="text-xs font-extrabold text-teal-400">40% EVALUATING</span>
+                            <div class="w-24 bg-slate-800 h-2 rounded-full overflow-hidden mt-1.5">
+                                <div class="bg-teal-500 h-full" style="width: 40%;"></div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <span class="text-xs font-extrabold text-slate-500">25% EARLY STAGE</span>
+                            <div class="w-24 bg-slate-800 h-2 rounded-full overflow-hidden mt-1.5">
+                                <div class="bg-slate-600 h-full" style="width: 25%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 4. BOTTOM DASHBOARD -->
+        <div class="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3">
+            
+            <div class="bg-slate-900/80 border border-slate-800 rounded-lg p-3 flex flex-col justify-between">
+                <div>
+                    <span class="text-[10px] font-extrabold text-slate-500 tracking-wider block mb-1">DELIVERY STATUS</span>
+                    <span class="inline-block bg-red-500/10 text-red-500 border border-red-500/20 text-[10px] font-black px-2 py-0.5 rounded">RED SHIFT</span>
+                </div>
+                <p class="text-[10px] text-slate-400 mt-2 leading-relaxed">보안 규제 이슈로 L3 도입 프로세스 일부 지연.</p>
+            </div>
+
+            <div class="bg-slate-900/80 border border-slate-800 rounded-lg p-3 flex flex-col justify-between">
+                <div>
+                    <span class="text-[10px] font-extrabold text-slate-500 tracking-wider block mb-1">BUDGET SCALE</span>
+                    <span class="inline-block bg-amber-500/10 text-amber-500 border border-amber-500/20 text-[10px] font-black px-2 py-0.5 rounded">AMBER RISK</span>
+                </div>
+                <p class="text-[10px] text-slate-400 mt-2 leading-relaxed">자율 에이전트 다중 실행에 따른 연산 비용 변동성 대응 필요.</p>
+            </div>
+
+            <div class="bg-slate-900/80 border border-slate-800 rounded-lg p-3 flex flex-col justify-between">
+                <div>
+                    <span class="text-[10px] font-extrabold text-slate-500 tracking-wider block mb-1">RESOURCE TRACK</span>
+                    <span class="inline-block bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 text-[10px] font-black px-2 py-0.5 rounded">GREEN</span>
+                </div>
+                <p class="text-[10px] text-slate-400 mt-2 leading-relaxed">오픈소스 프레임워크 인력 및 인프라 확보 원활.</p>
+            </div>
+
+            <div class="bg-slate-900/80 border border-slate-800 rounded-lg p-3 flex flex-col justify-between">
+                <div>
+                    <span class="text-[10px] font-extrabold text-slate-500 tracking-wider block mb-1">MARKET PERCEPTION</span>
+                    <span class="inline-block bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 text-[10px] font-black px-2 py-0.5 rounded">GREEN</span>
+                </div>
+                <p class="text-[10px] text-slate-400 mt-2 leading-relaxed font-normal">사내 워크플로우 생산성 개선에 따른 임직원 만족도 최상위.</p>
+            </div>
+
+            <div class="bg-slate-900/80 border border-slate-800 rounded-lg p-3 flex flex-col justify-between">
+                <div>
+                    <span class="text-[10px] font-extrabold text-slate-500 tracking-wider block mb-1">DEPENDENCIES</span>
+                    <span class="inline-block bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 text-[10px] font-black px-2 py-0.5 rounded">GREEN</span>
+                </div>
+                <p class="text-[10px] text-slate-400 mt-2 leading-relaxed">Model Context Protocol(MCP) 표준 도입으로 호환성 확보.</p>
+            </div>
+
+            <div class="bg-slate-900/80 border border-slate-800 rounded-lg p-3 flex flex-col">
+                <span class="text-[10px] font-extrabold text-slate-500 tracking-wider block mb-1.5 uppercase">RISKS ASSESS</span>
+                <div class="flex flex-col gap-1 text-[10px]">
+                    <div class="bg-slate-950 p-1 rounded border border-slate-800">
+                        <strong class="text-amber-400 block">COMPETITOR</strong> 메타의 Manus급 솔루션 인수 상황 모니터링.
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-900/80 border border-slate-800 rounded-lg p-3 flex flex-col">
+                <span class="text-[10px] font-extrabold text-slate-500 tracking-wider block mb-1.5 uppercase">CURRENT ISSUES</span>
+                <div class="flex flex-col gap-1 text-[10px]">
+                    <div class="bg-slate-950 p-1 rounded border border-slate-800">
+                        <strong class="text-red-400 block">DATA LEAKAGE</strong> 프롬프트 필터링 미작동 시 기밀 유출 리스크 방지책 점검.
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-900/80 border border-slate-800 rounded-lg p-3 flex flex-col">
+                <span class="text-[10px] font-extrabold text-slate-500 tracking-wider block mb-1.5 uppercase">FUTURE RADAR</span>
+                <div class="flex flex-col gap-1 text-[10px]">
+                    <div class="bg-slate-950 p-1 rounded border border-slate-800">
+                        <strong class="text-cyan-400 block">JULY 2026</strong> 전사 격리 샌드박스 인프라 론칭 예정.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- FOOTER BRANDING -->
+        <div class="relative z-10 flex justify-between items-center text-[10px] text-slate-500 border-t border-slate-800/60 pt-3 mt-4">
+            <div>POWERED BY <span class="font-extrabold text-slate-400">ENTERPRISE CORE AI</span></div>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-cyan-400">Security Center</a>
+                <span>|</span>
+                <a href="#" class="hover:text-cyan-400">System Architecture</a>
+            </div>
+            <div>PAGE 1 OF 1</div>
+        </div>
+
+    </div>
+
+</body>
+</html>
